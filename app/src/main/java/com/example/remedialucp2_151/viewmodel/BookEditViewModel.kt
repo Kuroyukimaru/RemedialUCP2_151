@@ -31,6 +31,12 @@ class BookEditViewModel(
             }
     }
 
+    fun updateState(newState: BookDetail) {
+        uiState = newState.copy(
+            isValid = newState.title.isNotBlank() && (newState.categoryId == null || newState.categoryId > 0)
+        )
+    }
+
     fun update(onDone: () -> Unit = {}) = viewModelScope.launch {
         if (uiState.isValid) {
             val oldBook = bookRepository.getBookStream(uiState.id).first()

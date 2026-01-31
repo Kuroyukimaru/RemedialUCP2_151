@@ -99,7 +99,7 @@ fun FormInputBook(
             enabled = enabled,
             singleLine = true
         )
-        // Tambah dropdown kategori jika perlu
+
         if (enabled) {
             Text(text = stringResource(R.string.required_field), modifier = Modifier.padding(start = dimensionResource(id = R.dimen.padding_medium)))
         }

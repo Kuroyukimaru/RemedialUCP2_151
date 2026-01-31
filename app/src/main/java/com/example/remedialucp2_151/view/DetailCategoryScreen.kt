@@ -38,7 +38,7 @@ fun DetailCategoryScreen(
         },
         floatingActionButton = {
             FloatingActionButton(
-                onClick = { navigateToEdit(1L) },  // Dummy ID, ganti dengan actual
+                onClick = { navigateToEdit(1L) },
                 shape = MaterialTheme.shapes.medium,
                 modifier = Modifier.padding(dimensionResource(id = R.dimen.padding_large))
             ) {
@@ -53,10 +53,10 @@ fun DetailCategoryScreen(
         val uiState = viewModel.uiState.collectAsState()
         val coroutineScope = rememberCoroutineScope()
         BodyDetailCategory(
-            category = uiState.value.listCategories.firstOrNull() ?: CategoryEntity(name = "Dummy"),  // Dummy, ganti dengan actual
+            category = uiState.value.listCategories.firstOrNull() ?: CategoryEntity(name = "Dummy"),
             onDelete = {
                 coroutineScope.launch {
-                    // viewModel.deleteCategory(id)  // Tambah method jika perlu
+
                     navigateBack()
                 }
             },
@@ -130,4 +130,28 @@ fun DetailDataCategory(
             }
         }
     }
+}
+
+@Composable
+fun DeleteConfirmationDialog(
+    onDeleteConfirm: () -> Unit,
+    onDeleteCancel: () -> Unit,
+    modifier: Modifier = Modifier
+) {
+    AlertDialog(
+        onDismissRequest = { },
+        title = { Text(stringResource(R.string.attention)) },
+        text = { Text(stringResource(R.string.confirm_delete)) },
+        modifier = modifier,
+        dismissButton = {
+            TextButton(onClick = onDeleteCancel) {
+                Text(stringResource(R.string.no))
+            }
+        },
+        confirmButton = {
+            TextButton(onClick = onDeleteConfirm) {
+                Text(stringResource(R.string.yes))
+            }
+        }
+    )
 }

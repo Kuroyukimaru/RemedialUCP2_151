@@ -11,7 +11,7 @@ import com.example.remedialucp2_151.viewmodel.*
 
 object PenyediaViewModel {
     val Factory = viewModelFactory {
-      
+
         initializer {
             BookListViewModel(aplikasiBuku().container.bookRepository)
         }

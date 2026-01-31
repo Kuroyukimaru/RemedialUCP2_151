@@ -48,7 +48,6 @@ fun EditCategoryScreen(
                 .verticalScroll(rememberScrollState())
         )
 
-        // Dialog Opsi Hapus Dinamis
         var deleteDialogRequired by rememberSaveable { mutableStateOf(false) }
         if (deleteDialogRequired) {
             DeleteCategoryDialog(
@@ -62,7 +61,6 @@ fun EditCategoryScreen(
             )
         }
 
-        // Trigger dialog (misalnya, button di UI)
         OutlinedButton(
             onClick = { deleteDialogRequired = true },
             modifier = Modifier.padding(innerPadding)
