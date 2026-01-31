@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">RemedialUCP2_151</string>
+    <string name="list_book_title">List Buku</string>
+    <string name="edit_book_title">Edit Buku</string>
+    <string name="detail_book_title">Detail Buku</string>
+    <string name="list_category_title">List Category</string>
+    <string name="entry_category_title">Tambah Category</string>
+    <string name="edit_category_title">Edit Category</string>
+    <string name="detail_category_title">Detail Category</string>
+    <string name="list_audit_title">List Audit</string>
+    <string name="back">Back</string>
+    <string name="entry_book">Tambah Buku</string>
+    <string name="no_books">no book</string>
+    <string name="update">Update</string>
+    <string name="delete">Hapus</string>
+    <string name="book_title">Book Title</string>
+    <string name="attention">Attention</string>
+    <string name="confirm_delete">Confirm Delete</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="entry_category">Tambah Category</string>
+    <string name="no_categories">No Category</string>
+    <string name="btn_submit">Submit</string>
+    <string name="category_name">Nama Category</string>
+    <string name="required_field">Required_Field</string>
+    <string name="delete_category">Hapus Category</string>
+    <string name="choose_delete_option">choose delete option</string>
+    <string name="delete_books">Hapus Buku</string>
+    <string name="set_no_category">set no category</string>
+    <string name="cancel">cancel</string>
+    <string name="no_audit_logs">no audit logs</string>
+</resources>
